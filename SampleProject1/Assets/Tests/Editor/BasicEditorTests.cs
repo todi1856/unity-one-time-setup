@@ -20,7 +20,7 @@ public class BasicEditortests
         Utilities.Log("ETearDown" + (s_Counter++));
     }
 
-    //[UnityOneTimeSetUp]
+    [UnityOneTimeSetUp]
     public IEnumerator EUnityOneTimeSetUp()
     {
         Utilities.Log("EUnityOneTimeSetUp" + (s_Counter++));
@@ -28,7 +28,7 @@ public class BasicEditortests
         Utilities.Log("EUnityOneTimeSetUp" + (s_Counter++));
     }
 
-    //[UnityOneTimeTearDown]
+    [UnityOneTimeTearDown]
     public IEnumerator EUnityOneTimeTearDown()
     {
         Utilities.Log("UnityOneTimeTearDown" + (s_Counter++));
