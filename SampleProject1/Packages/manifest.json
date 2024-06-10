@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.test-framework": "file:../../com.unity.test-framework/com.unity.test-framework",
     "com.unity.ide.rider": "3.0.28",
     "com.unity.ide.visualstudio": "2.0.22",
     "com.unity.mobile.android-logcat": "1.4.2",
