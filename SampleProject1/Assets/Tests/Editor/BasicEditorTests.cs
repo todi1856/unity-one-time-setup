@@ -39,7 +39,7 @@ public class BasicEditortests
     [SetUp]
     public void ESetUp()
     {
-        Utilities.Log("ETearDown" + (s_Counter++));
+        Utilities.Log("ESetUp" + (s_Counter++));
     }
 
     [TearDown]
