@@ -17,7 +17,7 @@ public class BasicEditortests
     [OneTimeTearDown]
     public void EOneTimeTearDown()
     {
-        Utilities.Log("ETearDown" + (s_Counter++));
+        Utilities.Log("EOneTimeTearDown" + (s_Counter++));
     }
 
     [UnityOneTimeSetUp]
