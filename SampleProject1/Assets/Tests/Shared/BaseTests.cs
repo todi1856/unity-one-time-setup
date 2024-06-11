@@ -4,6 +4,21 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.TestTools;
 
+/*
+namespace UnityEngine.TestTools
+{
+    [AttributeUsage(AttributeTargets.Method)]
+    public class UnityOneTimeSetUpAttribute : NUnitAttribute
+    {
+    }
+
+    [AttributeUsage(AttributeTargets.Method)]
+    public class UnityOneTimeTearDownAttribute : NUnitAttribute
+    {
+    }
+}
+//*/
+
 public class BaseTests
 {
     private static int s_BaseCounter;
