@@ -4,78 +4,76 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class BasicEditortests
+public class BasicEditortests : BaseTests
 {
-    static int s_Counter = 0;
-
     [OneTimeSetUp]
     public void EOneTimeSetUp()
     {
-        Utilities.Log("EOneTimeSetUp" + (s_Counter++));
+        Log("EOneTimeSetUp");
     }
 
     [OneTimeTearDown]
     public void EOneTimeTearDown()
     {
-        Utilities.Log("EOneTimeTearDown" + (s_Counter++));
+        Log("EOneTimeTearDown");
     }
 
     [UnityOneTimeSetUp]
     public IEnumerator EUnityOneTimeSetUp()
     {
-        Utilities.Log("EUnityOneTimeSetUp" + (s_Counter++));
+        Log("EUnityOneTimeSetUp");
         yield return null;
-        Utilities.Log("EUnityOneTimeSetUp" + (s_Counter++));
+        Log("EUnityOneTimeSetUp");
     }
 
     [UnityOneTimeTearDown]
     public IEnumerator EUnityOneTimeTearDown()
     {
-        Utilities.Log("UnityOneTimeTearDown" + (s_Counter++));
+        Log("EUnityOneTimeTearDown");
         yield return null;
-        Utilities.Log("UnityOneTimeTearDown" + (s_Counter++));
+        Log("EUnityOneTimeTearDown");
     }
 
     [SetUp]
     public void ESetUp()
     {
-        Utilities.Log("ESetUp" + (s_Counter++));
+        Log("ESetUp");
     }
 
     [TearDown]
     public void ETearDown()
     {
-        Utilities.Log("ETearDown" + (s_Counter++));
+        Log("ETearDown");
     }
 
 
     [UnitySetUp]
     public IEnumerator EUnitySetUp()
     {
-        Utilities.Log("EUnitySetUp" + (s_Counter++));
+        Log("EUnitySetUp");
         yield return null;
-        Utilities.Log("EUnitySetUp" + (s_Counter++));
+        Log("EUnitySetUp");
     }
 
     [UnityTearDown]
     public IEnumerator EUnityTearDown()
     {
-        Utilities.Log("EUnityTearDown" + (s_Counter++));
+        Log("EUnityTearDown");
         yield return null;
-        Utilities.Log("EUnityTearDown" + (s_Counter++));
+        Log("EUnityTearDown");
     }
 
     // A Test behaves as an ordinary method
     [Test]
     public void BasicTestsSimplePasses1()
     {
-        Utilities.Log("BasicTestsSimplePasses" + (s_Counter++));
+        Log("BasicTestsSimplePasses");
     }
 
     [Test]
     public void BasicTestsSimplePasses2()
     {
-        Utilities.Log("BasicTestsSimplePasses" + (s_Counter++));
+        Log("BasicTestsSimplePasses");
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
@@ -85,8 +83,8 @@ public class BasicEditortests
     {
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.
-        Utilities.Log("BasicTestsWithEnumeratorPasses" + (s_Counter++));
+        Log("BasicTestsWithEnumeratorPasses");
         yield return null;
-        Utilities.Log("BasicTestsWithEnumeratorPasses" + (s_Counter++));
+        Log("BasicTestsWithEnumeratorPasses");
     }
 }
