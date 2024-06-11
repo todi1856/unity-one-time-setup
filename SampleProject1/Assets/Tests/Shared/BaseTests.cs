@@ -10,7 +10,7 @@ public class BaseTests
 
     protected static void Log(string message)
     {
-        Utilities.Log(message + (s_BaseCounter++));
+        Utilities.Log(message + (s_BaseCounter++) + $" F:" + Time.frameCount);
     }
 
     [OneTimeSetUp]
