@@ -12,6 +12,13 @@ public class RecompileTests
         Utilities.Log("RecompileTestsOneTimeSetUp");
     }
 
+    [UnityOneTimeSetUp]
+    public IEnumerator RecompileTestsOneTimeSetUpEnumerator()
+    {
+        Utilities.Log("RecompileTestsOneTimeSetUpEnumerator");
+        yield return null;
+    }
+
     [SetUp]
     public void RecompileTestsSetUp()
     {
@@ -21,7 +28,8 @@ public class RecompileTests
     [UnitySetUp]
     public IEnumerator RecompileTestsSetUpEnumerator()
     {
-        yield return CreateScript();
+        Utilities.Log("RecompileTestsSetUpEnumerator");
+        yield return null;
     }
 
     [OneTimeTearDown]
@@ -37,18 +45,14 @@ public class RecompileTests
         Utilities.Log("RecompileTestsTearDown");
     }
 
-    private IEnumerable CreateScript()
+    [UnityTest]
+    public IEnumerator TestWithDomainReload()
     {
-        Utilities.Log("Start");
+        Utilities.Log("StartCreateScript");
         System.IO.File.WriteAllText("Assets/TestScript.cs", "class Dummy {}");
         AssetDatabase.Refresh();
         yield return new RecompileScripts();
 
-        Utilities.Log("Finished");
-    }
-    [UnityTest]
-    public IEnumerator TestWithDomainReload()
-    {
-        yield return CreateScript();
+        Utilities.Log("FinishedCreateScript");
     }
 }

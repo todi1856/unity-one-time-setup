@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "nuget.moq": "1.0.0",
     "com.unity.test-framework": "file:../../com.unity.test-framework/com.unity.test-framework",
     "com.unity.ide.rider": "3.0.28",
     "com.unity.ide.visualstudio": "2.0.22",
@@ -37,5 +38,8 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "testables": [
+    "com.unity.test-framework"
+  ]
 }
