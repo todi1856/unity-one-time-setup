@@ -6,4 +6,4 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes: []
   m_configObjects: {}
-  m_UseUCBPForAssetBundles: 0
+  m_UseUCBPForPlayerBuild: 1

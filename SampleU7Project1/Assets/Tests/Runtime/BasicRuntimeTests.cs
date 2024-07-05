@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 
 
 
-    public class BasicRuntimeTests : BaseTests
+public class BasicRuntimeTests : BaseTests
 {
     [OneTimeSetUp]
     public void EOneTimeSetUp()
